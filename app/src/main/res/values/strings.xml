@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">All stickers</string>
+    <string name="app_subtitle">ملصقاتك كلها في مكان واحد — وتصدير فوري إلى تيليجرام</string>
+    
+    <!-- Navigation & Tabs -->
+    <string name="nav_packs">حزم الملصقات</string>
+    <string name="nav_import">استيراد جديد</string>
+    <string name="nav_about">عن التطبيق والتراخيص</string>
+    
+    <!-- Home / Packs -->
+    <string name="title_sticker_packs">حزم الملصقات</string>
+    <string name="empty_packs_title">لا توجد حزم ملصقات بعد</string>
+    <string name="empty_packs_desc">ابدأ باستيراد ملصقات من واتساب بصيغة WebP أو ملفات ZIP أو .wastickers</string>
+    <string name="btn_create_pack">إنشاء حزمة جديدة</string>
+    <string name="btn_import_stickers">استيراد ملصقات</string>
+    <string name="stickers_count_format">%1$d ملصق</string>
+    
+    <!-- Import Screen -->
+    <string name="title_import">استيراد الملصقات</string>
+    <string name="import_desc">اختر ملفات ملصقات فردية (WebP / PNG / WEBM) أو حزمة مضغوطة (.wastickers / .zip)</string>
+    <string name="btn_pick_files">اختيار ملفات ملصقات</string>
+    <string name="btn_pick_zip">اختيار ملف ZIP / WASTICKERS</string>
+    <string name="import_processing">جارٍ فحص واستخراج الملفات...</string>
+    <string name="imported_count">%1$d ملف تم اكتشافه</string>
+    
+    <!-- Pack Details & Editor -->
+    <string name="pack_name_label">اسم الحزمة</string>
+    <string name="pack_shortname_label">الاسم المختصر (Short Name)</string>
+    <string name="pack_author_label">المؤلف (اختياري)</string>
+    <string name="pack_default_emoji">الرمز التعبيري الافتراضي (Emoji)</string>
+    <string name="btn_auto_name">توليد الأسماء تلقائيًا</string>
+    <string name="btn_start_conversion">بدء التحويل إلى تيليجرام</string>
+    <string name="btn_export_pack">تصدير الحزمة</string>
+    <string name="btn_delete_pack">حذف الحزمة</string>
+    <string name="confirm_delete_pack">هل أنت متأكد من رغبتك في حذف هذه الحزمة؟</string>
+    
+    <!-- Sticker Item -->
+    <string name="sticker_name_label">اسم الملصق</string>
+    <string name="sticker_emoji_label">Emoji</string>
+    <string name="sticker_status_pending">بانتظار التحويل</string>
+    <string name="sticker_status_processing">جارٍ المعالجة...</string>
+    <string name="sticker_status_ready">جاهز لتيليجرام ✓</string>
+    <string name="sticker_status_failed">فشل التحويل ✗</string>
+    
+    <!-- Conversion Queue -->
+    <string name="title_converting">معالجة الحزمة</string>
+    <string name="conversion_progress_format">تم تحويل %1$d من أصل %2$d</string>
+    <string name="btn_cancel">إلغاء</string>
+    <string name="conversion_summary_format">ناجح: %1$d | تعذر: %2$d</string>
+    
+    <!-- Export Dialog -->
+    <string name="export_to_telegram">إرسال مباشر إلى تيليجرام (رسمي)</string>
+    <string name="export_as_zip">حفظ كملف ZIP</string>
+    <string name="export_share">مشاركة عبر التطبيقات</string>
+    <string name="telegram_not_installed">تطبيق تيليجرام غير مثبت أو غير متاح</string>
+    
+    <!-- Validation Engine -->
+    <string name="val_ok">الملف مطابق لمواصفات تيليجرام</string>
+    <string name="val_size_too_large">حجم الملف أكبر من الحد الأقصى</string>
+    <string name="val_duration_too_long">مدة الحركة أطول من 3 ثوانٍ</string>
+    <string name="val_invalid_dimensions">أبعاد الملصق غير مطابقة لـ 512px</string>
+    <string name="val_unsupported_codec">ترميز غير متوافق</string>
+
+    <!-- Device WASTICKERS browser (Arabic / RTL) -->
+    <string name="wst_title">ملصقات WASTICKERS على الجهاز</string>
+    <string name="wst_subtitle">اكتشاف واستيراد حزم الملصقات من ذاكرة الهاتف</string>
+    <string name="wst_back">رجوع</string>
+    <string name="wst_refresh">تحديث الملفات</string>
+    <string name="wst_search_hint">ابحث باسم الملف…</string>
+    <string name="wst_clear_search">مسح البحث</string>
+    <string name="wst_no_results">لا توجد نتائج مطابقة للبحث</string>
+    <string name="wst_no_results_hint">جرّب كلمة أخرى أو امسح البحث</string>
+    <string name="wst_empty">لم يتم العثور على ملفات .wastickers</string>
+    <string name="wst_empty_desc">امنح صلاحية الوصول أو اختر المجلد الذي يحتوي على الحزم، ثم اضغط تحديث</string>
+    <string name="wst_loading">جارٍ فحص ذاكرة الهاتف…</string>
+    <string name="wst_error">حدث خطأ أثناء فحص الملفات</string>
+    <string name="wst_retry">إعادة المحاولة</string>
+    <string name="wst_selected_format">تم تحديد %1$d من أصل %2$d ملف</string>
+    <string name="wst_select_all">تحديد الكل</string>
+    <string name="wst_clear_selection">إلغاء التحديد</string>
+    <string name="wst_import_selected">استيراد المحدد</string>
+    <string name="wst_cancel_import">إلغاء الاستيراد</string>
+    <string name="wst_new_badge">NEW</string>
+    <string name="wst_discovered_at">تاريخ الاكتشاف: %1$s</string>
+    <string name="wst_modified">آخر تعديل: %1$s</string>
+    <string name="wst_size">الحجم: %1$s</string>
+    <string name="wst_mark_seen">تعليم الجديد كمقروء</string>
+    <string name="wst_status_ready">جاهز</string>
+    <string name="wst_status_importing">قيد الاستيراد</string>
+    <string name="wst_status_imported">تم الاستيراد</string>
+    <string name="wst_status_duplicate">مكرر — تم تخطيه</string>
+    <string name="wst_status_corrupt">ملف تالف</string>
+    <string name="wst_status_failed">فشل الاستيراد</string>
+    <string name="wst_permission_title">صلاحية الوصول إلى الملفات</string>
+    <string name="wst_permission_reason">يحتاج التطبيق إلى إذنك لقراءة ملفات .wastickers من ذاكرة الهاتف. اختر المجلد الذي يحتوي على الحزم وسيتم حفظ صلاحية الوصول للمرات القادمة. لا نطلب صلاحية واسعة على كل الملفات.</string>
+    <string name="wst_grant_folder">اختيار مجلد</string>
+    <string name="wst_grant_read">منح صلاحية القراءة</string>
+    <string name="wst_permission_denied">تم رفض الصلاحية. يمكنك المتابعة باختيار مجلد يدوياً.</string>
+    <string name="wst_overall_progress">التقدم الإجمالي: %1$d%%</string>
+    <string name="wst_import_done">اكتمل: ناجح %1$d | فاشل %2$d | مكرر %3$d</string>
+    <string name="wst_import_cancelled">تم إلغاء الاستيراد</string>
+    <string name="wst_browse_device">استعراض ملفات الجهاز</string>
+    <string name="wst_browse_device_desc">البحث التلقائي عن كل ملفات .wastickers في الذاكرة</string>
+    <string name="wst_files_count">الملفات المكتشفة (%1$d)</string>
+    <string name="wst_per_file_progress">تقدم الملف: %1$d%%</string>
+
+    <!-- Multi-source discovery / explicit states -->
+    <string name="wst_access_more_title">إضافة مصدر ملفات</string>
+    <string name="wst_access_more_desc">يمكنك منح مجلد إضافي أو اختيار ملفات .wastickers مباشرة. صلاحية مجلد واحد لا تمنح وصولاً تلقائياً إلى كل ملفات الهاتف.</string>
+    <string name="wst_pick_files_direct">اختيار ملفات مباشرة</string>
+    <string name="wst_empty_guide">لم نجد ملفات يمكن الوصول إليها. اختر ملفات .wastickers مباشرة، أو امنح مجلداً إضافياً يحتوي على الحزم (قد تكون داخل مجلدات فرعية)، ثم اضغط تحديث. على أندرويد 13+ لا يستطيع التطبيق رؤية ملفات التطبيقات الأخرى دون اختيارك لها.</string>
+    <string name="wst_found_banner">تم العثور على %1$d ملف جاهز للاستيراد</string>
+    <string name="wst_inaccessible_folders">تعذر قراءة %1$d مجلد (ربما تم سحب الصلاحية). أعد إضافة المجلد أو اختر الملفات مباشرة.</string>
+    <string name="wst_invalid_files">تم تجاهل %1$d ملف لأنه لا ينتهي بصيغة .wastickers</string>
+    <string name="wst_import_issues">تعذر استيراد %1$d ملف (تالف أو غير صالح)، وتم تخطي %2$d ملف مكرر</string>
+    <string name="wst_location">الموقع: %1$s</string>
+    <string name="wst_source_direct">ملف مختار</string>
+    <string name="wst_import_one">استيراد هذا الملف</string>
+
+    <!-- Comprehensive audit: content inspection, real previews, batch report -->
+    <string name="wst_status_needs_parts">يحتاج بقية الأجزاء</string>
+    <string name="wst_sticker_count">%1$d ملصق</string>
+    <string name="wst_type_animated">متحركة</string>
+    <string name="wst_type_static">ثابتة</string>
+    <string name="wst_file_name">الملف: %1$s</string>
+    <string name="wst_invalid_archive">أرشيف غير صالح</string>
+    <string name="wst_import_current">جارٍ الاستيراد: %1$s</string>
+    <string name="wst_import_report">النتيجة: ناجح %1$d | فاشل %2$d | مكرر %3$d | أجزاء ناقصة %4$d</string>
+    <string name="wst_no_preview">لا توجد معاينة</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">All stickers</string>
+
+    <!-- Device WASTICKERS browser (English / LTR) -->
+    <string name="wst_title">Device WASTICKERS</string>
+    <string name="wst_subtitle">Discover and import sticker packs from phone storage</string>
+    <string name="wst_back">Back</string>
+    <string name="wst_refresh">Refresh files</string>
+    <string name="wst_search_hint">Search by file name…</string>
+    <string name="wst_clear_search">Clear search</string>
+    <string name="wst_no_results">No matching files</string>
+    <string name="wst_no_results_hint">Try another keyword or clear the search</string>
+    <string name="wst_empty">No .wastickers files found</string>
+    <string name="wst_empty_desc">Grant access or choose the folder that holds the packs, then tap refresh</string>
+    <string name="wst_loading">Scanning device storage…</string>
+    <string name="wst_error">Something went wrong while scanning files</string>
+    <string name="wst_retry">Retry</string>
+    <string name="wst_selected_format">%1$d of %2$d files selected</string>
+    <string name="wst_select_all">Select all</string>
+    <string name="wst_clear_selection">Clear selection</string>
+    <string name="wst_import_selected">Import selected</string>
+    <string name="wst_cancel_import">Cancel import</string>
+    <string name="wst_new_badge">NEW</string>
+    <string name="wst_discovered_at">Discovered: %1$s</string>
+    <string name="wst_modified">Modified: %1$s</string>
+    <string name="wst_size">Size: %1$s</string>
+    <string name="wst_mark_seen">Mark new as seen</string>
+    <string name="wst_status_ready">Ready</string>
+    <string name="wst_status_importing">Importing</string>
+    <string name="wst_status_imported">Imported</string>
+    <string name="wst_status_duplicate">Duplicate — skipped</string>
+    <string name="wst_status_corrupt">Corrupt file</string>
+    <string name="wst_status_failed">Import failed</string>
+    <string name="wst_permission_title">Storage access permission</string>
+    <string name="wst_permission_reason">The app needs your permission to read .wastickers files from device storage. Choose the folder that contains the packs and the access grant will be kept for next time. No broad all-files permission is requested.</string>
+    <string name="wst_grant_folder">Choose folder</string>
+    <string name="wst_grant_read">Grant read permission</string>
+    <string name="wst_permission_denied">Permission denied. You can still pick a folder manually.</string>
+    <string name="wst_overall_progress">Overall progress: %1$d%%</string>
+    <string name="wst_import_done">Done: %1$d succeeded | %2$d failed | %3$d duplicate</string>
+    <string name="wst_import_cancelled">Import cancelled</string>
+    <string name="wst_browse_device">Browse device files</string>
+    <string name="wst_browse_device_desc">Automatically find every .wastickers file on storage</string>
+    <string name="wst_files_count">Discovered files (%1$d)</string>
+    <string name="wst_per_file_progress">File progress: %1$d%%</string>
+
+    <!-- Multi-source discovery / explicit states -->
+    <string name="wst_access_more_title">Add another file source</string>
+    <string name="wst_access_more_desc">You can grant an extra folder or pick .wastickers files directly. One folder grant never gives automatic access to every file on the phone.</string>
+    <string name="wst_pick_files_direct">Pick files directly</string>
+    <string name="wst_empty_guide">No reachable files were found. Pick .wastickers files directly, or grant an extra folder that holds the packs (they may be inside subfolders), then tap refresh. On Android 13+ the app cannot see files created by other apps unless you pick them.</string>
+    <string name="wst_found_banner">Found %1$d file(s) ready to import</string>
+    <string name="wst_inaccessible_folders">%1$d folder(s) could not be read (permission may have been revoked). Re-add the folder or pick the files directly.</string>
+    <string name="wst_invalid_files">%1$d file(s) ignored because they do not end with .wastickers</string>
+    <string name="wst_import_issues">%1$d file(s) failed to import (corrupt or invalid), %2$d duplicate(s) skipped</string>
+    <string name="wst_location">Location: %1$s</string>
+    <string name="wst_source_direct">Picked file</string>
+    <string name="wst_import_one">Import this file</string>
+
+    <!-- Comprehensive audit: content inspection, real previews, batch report -->
+    <string name="wst_status_needs_parts">Needs other parts</string>
+    <string name="wst_sticker_count">%1$d stickers</string>
+    <string name="wst_type_animated">Animated</string>
+    <string name="wst_type_static">Static</string>
+    <string name="wst_file_name">File: %1$s</string>
+    <string name="wst_invalid_archive">Invalid archive</string>
+    <string name="wst_import_current">Importing: %1$s</string>
+    <string name="wst_import_report">Result: %1$d succeeded | %2$d failed | %3$d duplicate | %4$d needs parts</string>
+    <string name="wst_no_preview">No preview</string>
+</resources>

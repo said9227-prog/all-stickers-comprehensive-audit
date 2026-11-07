@@ -1,0 +1,312 @@
+name: Build and Release Debug APK
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    name: Build and Release Debug APK
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # ============================================================
+      # 1. Checkout
+      # ============================================================
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ============================================================
+      # 2. Java 17
+      # ============================================================
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      # ============================================================
+      # 3. Android SDK (required for apksigner and compilation)
+      # ============================================================
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v4
+
+      # ============================================================
+      # 3. Verify Java
+      # ============================================================
+      - name: Verify Java environment
+        shell: bash
+        run: |
+          set -e
+
+          java -version
+          echo "JAVA_HOME=$JAVA_HOME"
+
+          JAVA_VERSION=$(java -version 2>&1 | awk -F '"' '/version/ {print $2}')
+
+          if [ -z "$JAVA_VERSION" ]; then
+            echo "ERROR: Failed to detect Java version."
+            exit 1
+          fi
+
+          MAJOR_VERSION=$(echo "$JAVA_VERSION" | awk -F '.' \
+            '{if ($1 == 1) print $2; else print $1}')
+
+          echo "Detected Java version: $JAVA_VERSION"
+          echo "Detected Java major version: $MAJOR_VERSION"
+
+          if [ "$MAJOR_VERSION" -lt 17 ]; then
+            echo "ERROR: Java version must be 17 or higher."
+            exit 1
+          fi
+
+          echo "Java environment verified successfully."
+
+      # ============================================================
+      # 4. Setup Gradle
+      # ============================================================
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '9.3.1'
+
+      # ============================================================
+      # 5. Verify Gradle wrapper
+      # ============================================================
+      - name: Prepare Gradle
+        shell: bash
+        run: |
+          set -e
+
+          if [ -f "./gradlew" ]; then
+            chmod +x ./gradlew
+            echo "Gradle wrapper found."
+          else
+            echo "Gradle wrapper not found."
+            echo "Using installed Gradle 9.3.1."
+          fi
+
+      # ============================================================
+      # 6. Build APK
+      # ============================================================
+      - name: Build the debug APK
+        shell: bash
+        run: |
+          set -e
+
+          echo "============================================================"
+          echo "BUILDING DEBUG APK"
+          echo "============================================================"
+
+          gradle :app:assembleDebug \
+            --stacktrace \
+            --no-daemon
+
+          echo ""
+          echo "Gradle build completed successfully."
+
+      # ============================================================
+      # 6.5. Run existing + WASTICKERS unit tests
+      # ============================================================
+      - name: Run unit tests
+        shell: bash
+        run: |
+          set -e
+
+          gradle :app:testDebugUnitTest \
+            --tests com.example.WhatsAppStickerValidatorTest \
+            --tests com.example.WhatsAppStickerPackProviderTest \
+            --tests com.example.WebpParserTest \
+            --tests com.example.StickerConversionUnitTest \
+            --tests com.example.StudioGeometryTest \
+            --tests com.example.StickerPreviewGroupingTest \
+            --tests com.example.WastickersDiscoveryTest \
+            --tests com.example.WastickersHistoryStoreTest \
+            --tests com.example.WastickersArchiveValidatorTest \
+            --tests com.example.WastickersImporterTest \
+            --tests com.example.WastickersDiscoveryScenariosTest \
+            --stacktrace \
+            --no-daemon
+
+      # ============================================================
+      # 7. Verify APK exists
+      # ============================================================
+      - name: Verify APK
+        shell: bash
+        run: |
+          set -e
+
+          TARGET_APK="app/build/outputs/apk/debug/app-debug.apk"
+
+          echo "============================================================"
+          echo "VERIFYING APK"
+          echo "============================================================"
+
+          if [ ! -f "$TARGET_APK" ]; then
+            echo "ERROR: APK not found:"
+            echo "$TARGET_APK"
+
+            echo ""
+            echo "Available APK files:"
+            find . \
+              -type f \
+              -name "*.apk" \
+              -print
+
+            exit 1
+          fi
+
+          if [ ! -s "$TARGET_APK" ]; then
+            echo "ERROR: APK is empty."
+            exit 1
+          fi
+
+          APK_SIZE=$(stat -c%s "$TARGET_APK")
+
+          echo "APK size: $APK_SIZE bytes"
+
+          if [ "$APK_SIZE" -lt 10000 ]; then
+            echo "ERROR: APK size is suspiciously small."
+            exit 1
+          fi
+
+          echo ""
+          echo "APK verified successfully."
+
+      # ============================================================
+      # 8. Find apksigner
+      # ============================================================
+      - name: Find apksigner
+        id: apksigner
+        shell: bash
+        run: |
+          set -e
+
+          echo "============================================================"
+          echo "FINDING APKSIGNER"
+          echo "============================================================"
+
+          if [ -z "$ANDROID_HOME" ]; then
+            echo "ERROR: ANDROID_HOME is not configured."
+            exit 1
+          fi
+
+          APKSIGNER=$(find "$ANDROID_HOME/build-tools" \
+            -type f \
+            -name "apksigner" \
+            | sort -V \
+            | tail -n 1)
+
+          if [ -z "$APKSIGNER" ]; then
+            echo "ERROR: apksigner was not found."
+            exit 1
+          fi
+
+          echo "apksigner found:"
+          echo "$APKSIGNER"
+
+          echo "path=$APKSIGNER" >> "$GITHUB_OUTPUT"
+
+      # ============================================================
+      # 9. Verify APK signature
+      # ============================================================
+      - name: Verify APK signature
+        shell: bash
+        run: |
+          set -e
+
+          TARGET_APK="app/build/outputs/apk/debug/app-debug.apk"
+          APKSIGNER="${{ steps.apksigner.outputs.path }}"
+
+          echo "============================================================"
+          echo "VERIFYING APK SIGNATURE"
+          echo "============================================================"
+
+          "$APKSIGNER" verify \
+            --verbose \
+            --print-certs \
+            "$TARGET_APK"
+
+          echo ""
+          echo "APK signature verification successful."
+
+      # ============================================================
+      # 10. Display final APK information
+      # ============================================================
+      - name: Display APK information
+        shell: bash
+        run: |
+          set -e
+
+          TARGET_APK="app/build/outputs/apk/debug/app-debug.apk"
+
+          echo "============================================================"
+          echo "FINAL APK INFORMATION"
+          echo "============================================================"
+
+          ls -lh "$TARGET_APK"
+
+          echo ""
+          echo "APK:"
+          echo "$TARGET_APK"
+
+          echo ""
+          echo "Application ID:"
+          echo "com.aistudio.stickerconv.w2tg"
+
+          echo ""
+          echo "APK is ready for release."
+
+      # ============================================================
+      # 11. Upload APK artifact
+      # ============================================================
+      - name: Upload debug APK artifact
+        # Always upload once the APK exists: a failing unit-test / signature
+        # step must not prevent the APK from being kept as a 1-day artifact.
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 1
+
+      # ============================================================
+      # 12. Publish GitHub Release
+      # ============================================================
+      - name: Publish GitHub Release
+        # Non-essential: the APK artifact is already uploaded above. A release
+        # API hiccup must not mark an otherwise successful APK build as failed.
+        if: github.ref == 'refs/heads/main'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -e
+
+          TARGET_APK="app/build/outputs/apk/debug/app-debug.apk"
+          TAG="v${{ github.run_number }}-$(date +%s)"
+
+          echo "============================================================"
+          echo "CREATING GITHUB RELEASE"
+          echo "============================================================"
+
+          echo "Release tag:"
+          echo "$TAG"
+
+          gh release create "$TAG" \
+            "$TARGET_APK" \
+            --title "Debug Build $TAG" \
+            --notes "Automated Debug APK release via GitHub Actions."
+
+          echo ""
+          echo "============================================================"
+          echo "BUILD AND RELEASE COMPLETED SUCCESSFULLY"
+          echo "============================================================"

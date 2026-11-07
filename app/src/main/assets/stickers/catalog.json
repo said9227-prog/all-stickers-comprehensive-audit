@@ -1,0 +1,677 @@
+{
+  "stickers": [
+    {
+      "id": "heart",
+      "name": "قلب",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/heart.png",
+      "previewAssetPath": "stickers/images/heart.png",
+      "category": "رموز",
+      "tags": [
+        "قلب",
+        "حب"
+      ]
+    },
+    {
+      "id": "star",
+      "name": "نجمة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/star.png",
+      "previewAssetPath": "stickers/images/star.png",
+      "category": "رموز",
+      "tags": [
+        "نجمة",
+        "تألق"
+      ]
+    },
+    {
+      "id": "crown",
+      "name": "تاج",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/crown.png",
+      "previewAssetPath": "stickers/images/crown.png",
+      "category": "رموز",
+      "tags": [
+        "تاج",
+        "ملك"
+      ]
+    },
+    {
+      "id": "diamond",
+      "name": "ألماسة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/diamond.png",
+      "previewAssetPath": "stickers/images/diamond.png",
+      "category": "رموز",
+      "tags": [
+        "ألماسة",
+        "جوهرة"
+      ]
+    },
+    {
+      "id": "ring",
+      "name": "خاتم",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/ring.png",
+      "previewAssetPath": "stickers/images/ring.png",
+      "category": "رموز",
+      "tags": [
+        "خاتم",
+        "ذهب"
+      ]
+    },
+    {
+      "id": "balloon",
+      "name": "بالون",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/balloon.png",
+      "previewAssetPath": "stickers/images/balloon.png",
+      "category": "رموز",
+      "tags": [
+        "بالون",
+        "احتفال"
+      ]
+    },
+    {
+      "id": "sparkle",
+      "name": "بريق",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/sparkle.png",
+      "previewAssetPath": "stickers/images/sparkle.png",
+      "category": "رموز",
+      "tags": [
+        "بريق",
+        "لمعان"
+      ]
+    },
+    {
+      "id": "gem",
+      "name": "جوهرة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/gem.png",
+      "previewAssetPath": "stickers/images/gem.png",
+      "category": "رموز",
+      "tags": [
+        "جوهرة",
+        "سحر"
+      ]
+    },
+    {
+      "id": "gift",
+      "name": "هدية",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/gift.png",
+      "previewAssetPath": "stickers/images/gift.png",
+      "category": "رموز",
+      "tags": [
+        "هدية",
+        "عيد"
+      ]
+    },
+    {
+      "id": "trophy",
+      "name": "كأس",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/trophy.png",
+      "previewAssetPath": "stickers/images/trophy.png",
+      "category": "رموز",
+      "tags": [
+        "كأس",
+        "فوز"
+      ]
+    },
+    {
+      "id": "medal",
+      "name": "ميدالية",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/medal.png",
+      "previewAssetPath": "stickers/images/medal.png",
+      "category": "رموز",
+      "tags": [
+        "ميدالية",
+        "إنجاز"
+      ]
+    },
+    {
+      "id": "sun",
+      "name": "شمس",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/sun.png",
+      "previewAssetPath": "stickers/images/sun.png",
+      "category": "طبيعة",
+      "tags": [
+        "شمس",
+        "ضوء"
+      ]
+    },
+    {
+      "id": "moon",
+      "name": "قمر",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/moon.png",
+      "previewAssetPath": "stickers/images/moon.png",
+      "category": "طبيعة",
+      "tags": [
+        "قمر",
+        "ليل"
+      ]
+    },
+    {
+      "id": "cloud",
+      "name": "سحابة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/cloud.png",
+      "previewAssetPath": "stickers/images/cloud.png",
+      "category": "طبيعة",
+      "tags": [
+        "سحابة",
+        "سماء"
+      ]
+    },
+    {
+      "id": "flower",
+      "name": "زهرة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/flower.png",
+      "previewAssetPath": "stickers/images/flower.png",
+      "category": "طبيعة",
+      "tags": [
+        "زهرة",
+        "ربيع"
+      ]
+    },
+    {
+      "id": "tree",
+      "name": "شجرة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/tree.png",
+      "previewAssetPath": "stickers/images/tree.png",
+      "category": "طبيعة",
+      "tags": [
+        "شجرة",
+        "طبيعة"
+      ]
+    },
+    {
+      "id": "leaf",
+      "name": "ورقة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/leaf.png",
+      "previewAssetPath": "stickers/images/leaf.png",
+      "category": "طبيعة",
+      "tags": [
+        "ورقة",
+        "أخضر"
+      ]
+    },
+    {
+      "id": "fire",
+      "name": "نار",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/fire.png",
+      "previewAssetPath": "stickers/images/fire.png",
+      "category": "طبيعة",
+      "tags": [
+        "نار",
+        "لهب"
+      ]
+    },
+    {
+      "id": "wave",
+      "name": "موجة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/wave.png",
+      "previewAssetPath": "stickers/images/wave.png",
+      "category": "طبيعة",
+      "tags": [
+        "موجة",
+        "بحر"
+      ]
+    },
+    {
+      "id": "rainbow",
+      "name": "قوس قزح",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/rainbow.png",
+      "previewAssetPath": "stickers/images/rainbow.png",
+      "category": "طبيعة",
+      "tags": [
+        "قوس",
+        "ألوان"
+      ]
+    },
+    {
+      "id": "smile",
+      "name": "ابتسامة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/smile.png",
+      "previewAssetPath": "stickers/images/smile.png",
+      "category": "وجوه",
+      "tags": [
+        "وجه",
+        "smile"
+      ]
+    },
+    {
+      "id": "love",
+      "name": "عيون قلب",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/love.png",
+      "previewAssetPath": "stickers/images/love.png",
+      "category": "وجوه",
+      "tags": [
+        "وجه",
+        "love"
+      ]
+    },
+    {
+      "id": "wink",
+      "name": "غمزة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/wink.png",
+      "previewAssetPath": "stickers/images/wink.png",
+      "category": "وجوه",
+      "tags": [
+        "وجه",
+        "wink"
+      ]
+    },
+    {
+      "id": "cool",
+      "name": "نظارة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/cool.png",
+      "previewAssetPath": "stickers/images/cool.png",
+      "category": "وجوه",
+      "tags": [
+        "وجه",
+        "cool"
+      ]
+    },
+    {
+      "id": "laugh",
+      "name": "ضحك",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/laugh.png",
+      "previewAssetPath": "stickers/images/laugh.png",
+      "category": "وجوه",
+      "tags": [
+        "وجه",
+        "laugh"
+      ]
+    },
+    {
+      "id": "sad",
+      "name": "حزين",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/sad.png",
+      "previewAssetPath": "stickers/images/sad.png",
+      "category": "وجوه",
+      "tags": [
+        "وجه",
+        "sad"
+      ]
+    },
+    {
+      "id": "angry",
+      "name": "غاضب",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/angry.png",
+      "previewAssetPath": "stickers/images/angry.png",
+      "category": "وجوه",
+      "tags": [
+        "وجه",
+        "angry"
+      ]
+    },
+    {
+      "id": "surprised",
+      "name": "متفاجئ",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/surprised.png",
+      "previewAssetPath": "stickers/images/surprised.png",
+      "category": "وجوه",
+      "tags": [
+        "وجه",
+        "surprised"
+      ]
+    },
+    {
+      "id": "sleepy",
+      "name": "نعسان",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/sleepy.png",
+      "previewAssetPath": "stickers/images/sleepy.png",
+      "category": "وجوه",
+      "tags": [
+        "وجه",
+        "sleepy"
+      ]
+    },
+    {
+      "id": "party",
+      "name": "حفلة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/party.png",
+      "previewAssetPath": "stickers/images/party.png",
+      "category": "وجوه",
+      "tags": [
+        "وجه",
+        "party"
+      ]
+    },
+    {
+      "id": "cat",
+      "name": "قطة",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/cat.png",
+      "previewAssetPath": "stickers/images/cat.png",
+      "category": "حيوانات",
+      "tags": [
+        "قطة",
+        "حيوان"
+      ]
+    },
+    {
+      "id": "dog",
+      "name": "كلب",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/dog.png",
+      "previewAssetPath": "stickers/images/dog.png",
+      "category": "حيوانات",
+      "tags": [
+        "كلب",
+        "حيوان"
+      ]
+    },
+    {
+      "id": "panda",
+      "name": "باندا",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/panda.png",
+      "previewAssetPath": "stickers/images/panda.png",
+      "category": "حيوانات",
+      "tags": [
+        "باندا",
+        "حيوان"
+      ]
+    },
+    {
+      "id": "bunny",
+      "name": "أرنب",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/bunny.png",
+      "previewAssetPath": "stickers/images/bunny.png",
+      "category": "حيوانات",
+      "tags": [
+        "أرنب",
+        "لطيف"
+      ]
+    },
+    {
+      "id": "rocket",
+      "name": "صاروخ",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/rocket.png",
+      "previewAssetPath": "stickers/images/rocket.png",
+      "category": "ألعاب",
+      "tags": [
+        "صاروخ",
+        "فضاء"
+      ]
+    },
+    {
+      "id": "gamepad",
+      "name": "يد تحكم",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/gamepad.png",
+      "previewAssetPath": "stickers/images/gamepad.png",
+      "category": "ألعاب",
+      "tags": [
+        "لعبة",
+        "تحكم"
+      ]
+    },
+    {
+      "id": "alien",
+      "name": "كائن فضائي",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/alien.png",
+      "previewAssetPath": "stickers/images/alien.png",
+      "category": "ألعاب",
+      "tags": [
+        "فضائي",
+        "لعبة"
+      ]
+    },
+    {
+      "id": "robot",
+      "name": "روبوت",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/robot.png",
+      "previewAssetPath": "stickers/images/robot.png",
+      "category": "ألعاب",
+      "tags": [
+        "روبوت",
+        "آلي"
+      ]
+    },
+    {
+      "id": "football",
+      "name": "كرة قدم",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/football.png",
+      "previewAssetPath": "stickers/images/football.png",
+      "category": "ألعاب",
+      "tags": [
+        "كرة",
+        "رياضة"
+      ]
+    },
+    {
+      "id": "music",
+      "name": "موسيقى",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/music.png",
+      "previewAssetPath": "stickers/images/music.png",
+      "category": "ألعاب",
+      "tags": [
+        "نغمة",
+        "صوت"
+      ]
+    },
+    {
+      "id": "camera",
+      "name": "كاميرا",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/camera.png",
+      "previewAssetPath": "stickers/images/camera.png",
+      "category": "ألعاب",
+      "tags": [
+        "كاميرا",
+        "تصوير"
+      ]
+    },
+    {
+      "id": "book",
+      "name": "كتاب",
+      "type": "NORMAL_IMAGE",
+      "assetPath": "stickers/images/book.png",
+      "previewAssetPath": "stickers/images/book.png",
+      "category": "ألعاب",
+      "tags": [
+        "كتاب",
+        "قراءة"
+      ]
+    },
+    {
+      "id": "m_cube",
+      "name": "مكعب ثلاثي",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_cube.glb",
+      "previewAssetPath": "stickers/images/m_cube_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "مكعب",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_sphere",
+      "name": "كرة ثلاثية",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_sphere.glb",
+      "previewAssetPath": "stickers/images/m_sphere_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "كرة",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_cylinder",
+      "name": "أسطوانة ثلاثية",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_cylinder.glb",
+      "previewAssetPath": "stickers/images/m_cylinder_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "أسطوانة",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_torus",
+      "name": "إطار حلقي",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_torus.glb",
+      "previewAssetPath": "stickers/images/m_torus_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "حلقة",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_cone",
+      "name": "مخروط ثلاثي",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_cone.glb",
+      "previewAssetPath": "stickers/images/m_cone_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "مخروط",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_pyramid",
+      "name": "هرم ثلاثي",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_pyramid.glb",
+      "previewAssetPath": "stickers/images/m_pyramid_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "هرم",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_star",
+      "name": "نجمة ثلاثية",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_star.glb",
+      "previewAssetPath": "stickers/images/m_star_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "نجمة",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_heart",
+      "name": "قلب ثلاثي",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_heart.glb",
+      "previewAssetPath": "stickers/images/m_heart_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "قلب",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_octa",
+      "name": "بلورة ثمانية",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_octa.glb",
+      "previewAssetPath": "stickers/images/m_octa_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "بلورة",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_ring",
+      "name": "حلقة ذهبية",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_ring.glb",
+      "previewAssetPath": "stickers/images/m_ring_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "خاتم",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_capsule",
+      "name": "كبسولة ثلاثية",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_capsule.glb",
+      "previewAssetPath": "stickers/images/m_capsule_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "كبسولة",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_ico",
+      "name": "مجسم عشروني",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_ico.glb",
+      "previewAssetPath": "stickers/images/m_ico_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "مجسم",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_diamond",
+      "name": "ألماسة ثلاثية",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_diamond.glb",
+      "previewAssetPath": "stickers/images/m_diamond_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "ألماسة",
+        "3D"
+      ]
+    },
+    {
+      "id": "m_gear",
+      "name": "ترس ثلاثي",
+      "type": "MODEL_3D",
+      "assetPath": "stickers/models/m_gear.glb",
+      "previewAssetPath": "stickers/images/m_gear_preview.png",
+      "category": "أشكال ثلاثية",
+      "tags": [
+        "ترس",
+        "3D"
+      ]
+    }
+  ],
+  "note": "ملصقات مدمجة تعمل بدون إنترنت."
+}

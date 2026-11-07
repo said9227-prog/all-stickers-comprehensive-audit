@@ -1,0 +1,8 @@
+{
+  "name": "All stickers",
+  "description": "All stickers — manage your stickers in one place and export official packs to WhatsApp, WhatsApp Business and Telegram with emojis, validation and smart compression. Includes a live sticker studio with filters, layers, brush, Arabic/English text, background removal and cropping.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
